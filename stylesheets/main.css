@@ -1,0 +1,224 @@
+/* 
+I found w3schools was a very good resource for understanding a lot of these concepts 
+Available at: https://www.w3schools.com
+*/
+
+
+
+/* This is for the scroll button at the bottom of each page */
+
+html {
+  scroll-behavior: smooth;
+ }
+ 
+ 
+ 
+.scroll-button {
+	background-color: grey;
+	color: white;
+	text-align: center;
+	padding: 8px 15px;
+	margin: 4px 2px;
+	opacity: 0.6;
+	transition: 0.3s;
+	text-decoration: none;
+
+}
+
+.scroll-button:hover {
+	opacity: 1;
+}
+
+
+
+
+
+h1 {
+	text-align: center;
+}
+
+
+
+/* These are all of the styling tags for the navbar */
+
+.navbar a:hover{
+	background-color: blue;
+	}
+
+.navbar {
+  overflow: hidden;
+  background-color: black;
+  font-family: Arial;
+}
+
+.navbar a {
+  float: left;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+
+.navbar #active{
+	background-color: #a0a0a0;
+	color: white;
+}
+
+
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+
+
+.dropdown .dropbutton{
+	font-size: 18px;
+	border: none;
+	padding: 14px 16px;
+	background-color: inherit;
+	font-family: inherit;
+	color: white;
+	margin: 0;
+
+}
+
+#nav a:hover, .dropdown:hover .dropbutton {
+  background-color: blue;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+/* These styles pad and colour the IL and lab tasks */
+
+#il {
+	padding: 15px 30px;
+}
+
+#iltask{
+	background-color: #f6f4ef;
+	padding: 15px 20px;
+}
+
+
+#lab {
+	padding: 15px 30px;
+}
+
+#labtask{
+	background-color: #eff6f0;
+	padding: 15px 20px;
+}
+
+
+
+
+
+
+#centered{
+	text-align: center; 
+}
+
+
+
+
+/* This splits the screen into two columns, one is larger than the other. I use this on the index page */ 
+.column {
+  float: left;
+}
+
+.column.side {
+  width: 25%;
+}
+
+.column.middle {
+  width: 75%;
+}
+
+
+
+/* This is used for the heading of each lab task to centre it and colour the background */
+.title {
+	text-align: center;
+	padding: 22px;
+	background-color: #f6efef;
+}
+
+
+
+
+/* These classes are to split content across the page in three columns */
+
+.triple-split {
+	float: left;
+}
+
+.triple-split.left {
+	width: 33.3%;
+}
+
+.triple-split.center {
+	width: 33.3%;
+}
+
+.triple-split.right {
+	width: 33.3%;
+}
+
+
+
+/* This will make sure that content is spread across the width of the full page */
+
+.full-page {
+	float: left;
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
