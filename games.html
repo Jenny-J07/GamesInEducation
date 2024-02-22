@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+	<html lang="en">
+	<head>
+	
+		<title>Games in Education</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="stylesheet" href="stylesheets/main.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+	
+	</head>
+
+
+
+	<body>
+	
+	
+		<div class="title">
+			<h1>Games</h1>	
+		
+		</div>
+	
+	
+		<!-- <div class="navbar"> -->
+		
+		<nav>
+			<ul>
+				<li class="home"><a class="fa fa-home" href="index.html"></a></li>
+
+				<li><a href="benefits.html">Benefits</a></li>
+				<li><a href="games.html">Games</a></li>
+				<li><a href="howto.html">How to</a></li>
+				<li><a href="#">Resources</a></li>
+	
+			</ul>
+		</nav>
+			
+
+
+<!-- 
+		<div class="slide images">
+			
+			<div class="images-prev"></div>
+			<div class="images-next"></div>
+				
+		
+			<ul>
+				<li> <img src="images/brown_bear_running.jpg" alt="bear" width="90%"></li>
+				<li> <img src="images/brown_bear_running.jpg" alt="bear" width="90%"></li>
+				<li> <img src="images/brown_bear_running.jpg" alt="bear" width="90%"></li>
+			</ul>
+		</div>
+ -->
+
+		<br>
+		<div class="slides fade">
+		
+			<div class="slide-image">
+				<div class="slide-title">HELLO 1</div>
+				<center><img src="images/test.png" alt="bear" width="50%"></center>
+				<div class="slide-info">here is info. lot of info is happenign
+				blah balfh info info words! </div>
+			</div>
+				
+			<div class="slide-image">
+				<div class="slide-title">HELLO 2</div>
+				<center><img src="images/brown_bear_running.jpg" alt="bear" width="50%"></center>
+				<div class="slide-info">here is more info</div>
+			</div>
+			
+			<div class="slide-image">
+				<div class="slide-title">HELLO 3</div>
+				<center><img src="images/brown_bear_running.jpg" alt="bear" width="50%"></center>
+				<div class="slide-info">here is even more info</div>
+			</div>	
+
+			<a class="back" onclick="plusSlides(-1)">&#10094;</a>
+  			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	
+
+		</div>
+
+		<div class="centered">
+			<span class="dots" onclick="currentSlide(1)"></span>
+			<span class="dots" onclick="currentSlide(2)"></span>
+			<span class="dots" onclick="currentSlide(3)"></span>
+		</div>
+		<br>
+		
+
+		<br><br>
+		<h2>Game Library:</h2>
+
+		<div class="game-library">
+			
+			<div class="game-card">
+				<h3>infoinfoinfo</h3>
+				<img class="library-image" src="images/brown_bear_running.jpg" alt="bear" >
+				<p>infoinfoinfo</p>
+			</div>
+			
+			<div class="game-card">
+				<h3>infoinfoinfo</h3>
+				<img class="library-image" src="images/brown_bear_running.jpg" alt="bear" >
+				<p>infoinfoinfo</p>
+			</div>
+			
+			<div class="game-card">
+				<h3>infoinfoinfo</h3>
+				<img class="library-image" src="images/brown_bear_running.jpg" alt="bear" >
+				<p>infoinfoinfo</p>
+			</div>
+
+			<br><br>
+		</div>
+
+
+
+
+
+
+	
+		<hr>	
+		<!-- begin footer -->
+		
+		<footer>
+		<p>Student Number: 2680164J<br>
+		Submitted in fulfilment of MAD(A)</p>
+		</footer>
+	
+		<!-- end footer -->
+	
+	
+	
+		<script>
+			var slidePosition = 1; 
+			SlideShow(slidePosition);
+			
+			function plusSlides(n){
+				SlideShow(slidePosition += n);
+			}
+			
+			function currentSlide(n){
+				SlideShow(slidePosition = n);
+			}
+		
+			function SlideShow(n){
+				var i;
+				var slides = document.getElementsByClassName("slide-image");
+				var circles = document.getElementsByClassName("dots");
+				if (n > slides.length) {slidePosition = 1}
+				if (n < 1) {slidePosition = slides.length}
+				for (i = 0; i < slides.length; i++){
+					slides[i].style.display  = "none"
+				}
+				for (i = 0; i < circles.length; i++){
+					circles[i].className = circles[i].className.replace(" enable", "");
+				}
+				
+				slides[slidePosition-1].style.display = "block";
+				circles[slidePosition-1].className += " enable";
+			}
+			
+		
+		
+		
+		</script>
+	
+	
+	</body>
+
+
+
+</html>
