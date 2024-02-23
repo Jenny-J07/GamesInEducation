@@ -51,45 +51,104 @@ h2 {
 /* These are all of the styling tags for the navbar */
 
 
-nav {
-	height: 50px;
-	background-color: black;
-  	font-family: Arial;
-  	overflow: hidden;
-/*   	display: flex; */
+
+@media(max-width:600px){
+	.hamburger{
+		display:block;
+		cursor: pointer;
+	}
+	
+	.menu-top{
+		position: fixed;
+		left: -100%;
+		gap: 0;
+		flex-direction: column;
+		background-color: black;
+		text-align: center;
+		transition: 0.3s;
+	}
+	
+	.menu-item{
+		margin: 16px;
+	}
+
+
+	.menu .menu-top.active{ 
+		left: 0;
+	}
+	
 }
 
-nav ul{
-	padding-left: 20px;
-	padding-right: 20px;
-	display: flex;
-	justify-content: space-around;
-	list-style-type: none; 
-}
 
-nav li{
-	display: inline-block;
-	height: 100%;
-	width: 10%;
-	transition: .2s linear;
-}
 
-nav li a {
-    color: white;
-    font-size: 17px;
-    text-decoration: none;
-}
 
-nav li a:hover {
-    color: #dd5771;
-    font-weight: 700;
-    transform: translateY(-3px); 
-}
 
-nav li:hover {
-	transform: translateY(-3px); 
-}
 
+
+
+
+
+/* @media(min-width: 600px){ */
+	.menu {
+		height: 50px;
+		background-color: black;
+		font-family: Arial;
+		overflow: hidden;
+	/*   	display: flex; */
+	}
+
+	.menu .menu-top{
+		padding-left: 20px;
+		padding-right: 20px;
+		display: flex;
+		justify-content: space-around;
+		list-style-type: none; 
+	}
+	
+	.menu .menu-item{
+		display: inline-block;
+		height: 100%;
+		width: 10%;
+		transition: .2s linear;
+	}
+	
+	.menu .menu-item a {
+		color: white;
+		font-size: 17px;
+		text-decoration: none;
+	}
+	
+	.menu .menu-item a:hover {
+		color: #dd5771;
+		font-weight: 700;
+		transform: translateY(-3px); 
+	}
+	
+	.menu .menu-item:hover {
+		transform: translateY(-3px); 
+	}
+
+
+	@media(max-width: 600%){
+		.hamburger{
+			display: none;
+			cursor: pointer;
+		}
+	}
+	
+	.bar{
+		display: block;
+		width: 25px;
+		height: 3px;
+		margin: 5px auto;
+		-webkit-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		background-color: white;
+		color: white;
+	}
+	
+
+/* } */
 
 
 
@@ -151,7 +210,14 @@ nav li:hover {
 
 
 
-/* These are grids used for the page layout */
+/* 
+
+These are grids used for the page layout 
+
+https://stackoverflow.com/questions/47614008/can-i-have-a-varying-number-of-columns-per-row-in-a-css-grid
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
+*/
 
 :root {
 	box-sizing: border-box;
@@ -164,29 +230,58 @@ nav li:hover {
 }
 
 
-.grid {
-	float: left;
-	border-radius: .5em;
+
+
+.grid-container {
+	display: grid;
+	row-gap: 10px;
 }
 
 
+@media screen and (min-width: 600px){
+
+	.grid-container{
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-areas:
+			"a a a b b b"
+			"c c d d e e"
+	}
+
+	.item-a{
+		/* 
+		grid-column-start: 1;
+		grid-column-end: 2;
+ 		*/
+ 		grid-area: a;
+	}
+	
+	.item-b{
+		grid-area: b;
+	}
+	
+	.item-c{
+		grid-area: c;
+	}
+	
+	.item-d{
+		grid-area: d;
+	}
+	
+	.item-e{
+		grid-area: e;
+	}
+	
+}
+
+
+/* 
 .grid.half {
 	width: 50%;
 }
+ */
 
 
-.grid.full {
-	width: 100%;
-}
 
-
-.grid.triple {
-	width: 33.3%
-}
-
-.grid.quarter {
-	width: 25%;
-}
 
 
 .padding {
@@ -362,8 +457,6 @@ nav li:hover {
 .slide-image:hover .slide-info{
 	display: block;
 }
-
-
 
 
 
