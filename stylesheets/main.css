@@ -4,19 +4,17 @@ Available at: https://www.w3schools.com
 */
 
 
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-
-
 /* This is for the scroll button at the bottom of each page */
 
 html {
   scroll-behavior: smooth;
- }
+}
+
+body {
+	font-family: "Nunito Sans", sans-serif;
+}
  
+
  
  
 .scroll-button {
@@ -41,11 +39,13 @@ html {
 
 h1 {
 	text-align: center;
+	font-family: "Raleway", sans-serif;
 }
 
 
 h2 {
 	font-size: 21px;
+	font-family: "Raleway", sans-serif;
 }
 
 /* These are all of the styling tags for the navbar */
@@ -58,9 +58,9 @@ h2 {
 		cursor: pointer;
 	}
 	
-	.menu-top{
+	.menutop{
 		position: fixed;
-		left: -100%;
+		/* left: -100%; */
 		gap: 0;
 		flex-direction: column;
 		background-color: black;
@@ -72,23 +72,16 @@ h2 {
 		margin: 16px;
 	}
 
-
-	.menu .menu-top.active{ 
+	.menu .menutop .active{ 
 		left: 0;
 	}
-	
+
+
 }
 
 
 
-
-
-
-
-
-
-
-/* @media(min-width: 600px){ */
+@media(min-width: 600px){
 	.menu {
 		height: 50px;
 		background-color: black;
@@ -97,7 +90,7 @@ h2 {
 	/*   	display: flex; */
 	}
 
-	.menu .menu-top{
+	.menu .menutop{
 		padding-left: 20px;
 		padding-right: 20px;
 		display: flex;
@@ -129,11 +122,11 @@ h2 {
 	}
 
 
-	@media(max-width: 600%){
+	@media(min-width: 600px){
 		.hamburger{
-			display: none;
-			cursor: pointer;
+			display: none; 
 		}
+				
 	}
 	
 	.bar{
@@ -148,14 +141,14 @@ h2 {
 	}
 	
 
-/* } */
+}
 
 
 
 
 
 
-.dropdown {
+/* .dropdown {
 	float: left;
 	overflow: hidden;
 }
@@ -200,7 +193,7 @@ h2 {
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
+} */
 
 
 
@@ -238,9 +231,13 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 
+
+
+
+
 @media screen and (min-width: 600px){
 
-	.grid-container{
+	.grid-container {
 		grid-template-columns: repeat(6, 1fr);
 		grid-template-areas:
 			"a a a b b b"
@@ -248,10 +245,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	}
 
 	.item-a{
-		/* 
-		grid-column-start: 1;
-		grid-column-end: 2;
- 		*/
  		grid-area: a;
 	}
 	
@@ -274,25 +267,22 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 
-/* 
-.grid.half {
-	width: 50%;
+
+
+
+.benefit-box {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding-top: 10px;
+	padding-bottom: 15px;
 }
- */
-
-
-
-
 
 .padding {
 	padding-left: 10px;
 	padding-right:10px;
 }
 
-.benefit-box{
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
+
 
 
 .centered {
@@ -322,8 +312,12 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 
 .slide-image {
 	display: none;
+	width:70%;
+	margin-left: auto;
+	margin-right: auto;
 
 }
+
 
 
 .back, .next {
@@ -362,6 +356,8 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	padding: 10px 14px;
 	position: absolute;
 	text-align: center;
+	margin-top: 20px;
+	border-style: solid;
 }
 
 
@@ -409,23 +405,60 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 
 
 .game-library {
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	row-gap: 10px;
+	column-gap: 10px;
+}
+
+@media screen and (max-width:1000px){
+	.game-library {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	
+}
+
+
+@media screen and (max-width:800px){
+	.game-library {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+}
+
+
+@media screen and (max-width:600px){
+	.game-library {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	
 }
 
 .game-card {
+	/* flex-basis: calc(33.333% - 20px); */
+	/* border-style: solid;  */
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-top {
 	background-color: pink;
-	flex-basis: calc(33.333% - 20px);
-	/* float: left; */
+
+}
+
+.card-bottom {
+	background-color: white;
 
 }
 
 
 .game-library img {
-	width: 80%;
+	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
+	margin-bottom: 10px;
 }
 
 
@@ -434,7 +467,9 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 .game-library h3{
-	padding: 6px;
+	margin-top: 5px;
+	margin-left: 10px;
+	
 }
 
 /* 
@@ -457,21 +492,3 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 .slide-image:hover .slide-info{
 	display: block;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

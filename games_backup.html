@@ -19,7 +19,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Workbench&display=swap" rel="stylesheet">
 
-
+		
 	
 	</head>
 
@@ -40,7 +40,7 @@
 	
 	
 	
-			<ul class="menutop">
+			<ul class="menu-top">
 				<li class="home menu-item"><a class="fa fa-home" href="index.html"></a></li>
 
 				<li class="menu-item"><a href="benefits.html">Benefits</a></li>
@@ -76,19 +76,19 @@
  -->
 
 		<br>
-		<div class="slides fade">
+		<!-- <div class="slides fade">
 		
 			<div class="slide-image">
 				<div class="slide-title">HELLO 1</div>
 				<center><img src="images/test.png" alt="bear" width="50%"></center>
 				<div class="slide-info">here is info. lot of info is happenign
-				blah balfh info info words!</div>
+				blah balfh info info words! </div>
 			</div>
 				
 			<div class="slide-image">
 				<div class="slide-title">HELLO 2</div>
 				<center><img src="images/brown_bear_running.jpg" alt="bear" width="50%"></center>
-				<center><div class="slide-info">here is more info</div></center>
+				<div class="slide-info">here is more info</div>
 			</div>
 			
 			<div class="slide-image">
@@ -101,7 +101,7 @@
   			<a class="next" onclick="plusSlides(1)">&#10095;</a>
 	
 
-		</div>
+		</div> 
 
 		<div class="centered">
 			<span class="dots" onclick="currentSlide(1)"></span>
@@ -109,6 +109,38 @@
 			<span class="dots" onclick="currentSlide(3)"></span>
 		</div>
 		<br>
+
+		-->
+
+
+		<div class="holder">  
+			<div class="spinner">
+			  <div class="panel a"></div>
+			  <div class="panel b"></div>
+			  <div class="panel c"></div>
+			  <div class="panel d"></div>
+			  <div class="panel e"></div>
+			  <div class="panel f"></div>
+			  <div class="panel g"></div>
+			  <div class="panel h"></div>
+			  <div class="panel i"></div>
+			  <div class="panel j"></div>
+			  <div class="panel k"></div>
+			  <div class="panel l"></div>
+			  <div class="panel m"></div>
+			  <div class="panel n"></div>
+			  <div class="panel o"></div>
+			  <div class="panel p"></div>
+			  <div class="fade"></div>
+			</div>
+		  </div>
+		  <div class="pagination">
+			<button type="button" id="prev">&#8592;</button>
+			<button type="button" id="next">&#8594;</button>
+		  </div>
+
+
+
 		
 
 		<br><br>
@@ -178,32 +210,45 @@
 				SlideShow(slidePosition += n);
 			}
 			
-			function currentSlide(n){
-				SlideShow(slidePosition = n);
-			}
+			// function currentSlide(n){
+			// 	SlideShow(slidePosition = n);
+			// }
 		
-			function SlideShow(n){
-				var i;
-				var slides = document.getElementsByClassName("slide-image");
-				var circles = document.getElementsByClassName("dots");
-				if (n > slides.length) {slidePosition = 1}
-				if (n < 1) {slidePosition = slides.length}
-				for (i = 0; i < slides.length; i++){
-					slides[i].style.display  = "none"
-				}
-				for (i = 0; i < circles.length; i++){
-					circles[i].className = circles[i].className.replace(" enable", "");
-				}
+			// function SlideShow(n){
+			// 	var i;
+			// 	var slides = document.getElementsByClassName("slide-image");
+			// 	var circles = document.getElementsByClassName("dots");
+			// 	if (n > slides.length) {slidePosition = 1}
+			// 	if (n < 1) {slidePosition = slides.length}
+			// 	for (i = 0; i < slides.length; i++){
+			// 		slides[i].style.display  = "none"
+			// 	}
+			// 	for (i = 0; i < circles.length; i++){
+			// 		circles[i].className = circles[i].className.replace(" enable", "");
+			// 	}
 				
-				slides[slidePosition-1].style.display = "block";
-				circles[slidePosition-1].className += " enable";
-			}
+			// 	slides[slidePosition-1].style.display = "block";
+			// 	circles[slidePosition-1].className += " enable";
+			// }
 			
+
+			var ang = 0;
+
+			$("#prev").click(function(){
+				ang = ang + 22.5;
+			$("*").css("--ang", ang);
+			});
+
+			$("#next").click(function(){
+				ang = ang - 22.5;
+			$("*").css("--ang", ang);
+			});
 		
 		
 		
 		</script>
 	
+
 	
 	</body>
 
