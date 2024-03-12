@@ -37,25 +37,25 @@
 	
 		<!-- <div class="navbar"> -->
 		
-		<nav class="menu" id="Menu">
+		<nav class="menu">
 		
 		
 		
-			<ul class="menutop" id="menuTop">
-					<li class="home menu-item"><a class="fa fa-home" href="index.html"></a></li>
+			<ul class="menutop">
+				<li class="home menu-item"><a class="fa fa-home" href="index.html"></a></li>
 
-					<li class="menu-item"><a href="benefits.html">Benefits</a></li>
-					<li class="menu-item"><a href="games.html">Games</a></li>
-					<li class="menu-item"><a href="howto.html">How to</a></li>
-					<li class="menu-item"><a href="#">Resources</a></li>
-					<li class="icon"><a href="javascript:void(0);" class="icon" onclick="myFunction()">
-						<i class="fa fa-bars"></i>
-						</a>
-					</li>
+				<li class="menu-item"><a href="benefits.html">Benefits</a></li>
+				<li class="menu-item"><a href="games.html">Games</a></li>
+				<li class="menu-item"><a href="howto.html">How to</a></li>
+				<li class="menu-item"><a href="#">Resources</a></li>
+	
 			</ul>
 			
-
-	
+			<div class="hamburger">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</div>
 			
 		</nav>
 
@@ -157,22 +157,17 @@
 	
 	<script>
 	
-	function myFunction() {
-		var x = document.getElementById("Menu");
-		if (x.className === "menu") {
-			x.className += " responsiveMenu";
-		} else {
-			x.className = "menu";
-		}
+		const hamburger = document.querySelector(".hamburger");
+		const menutop = document.querySelector(".menutop");
+	
+		hamburger.addEventListener("click", () => {
+			hamburger.classList.toggle("active")
+			menutop.classList.toggle("active")
+		})
+		
+		
 
-		var y = document.getElementById("menuTop");
-		if (y.className === "menutop") {
-			y.className += " responsive";
-		} else {
-			y.className = "menutop";
-		}
-	}
-
+	
 	</script>
 	
 		
