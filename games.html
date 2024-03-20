@@ -19,13 +19,13 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Workbench&display=swap" rel="stylesheet">
 
-		<script src="script.js"></script>
+		<!-- <script src="script.js"></script> -->
 	
 	</head>
 
 
 
-	<body>
+	<body onresize="execute()">
 	
 	
 		<div class="title">
@@ -60,40 +60,25 @@
 			
 
 
-<!-- 
-		<div class="slide images">
-			
-			<div class="images-prev"></div>
-			<div class="images-next"></div>
-				
-		
-			<ul>
-				<li> <img src="images/brown_bear_running.jpg" alt="bear" width="90%"></li>
-				<li> <img src="images/brown_bear_running.jpg" alt="bear" width="90%"></li>
-				<li> <img src="images/brown_bear_running.jpg" alt="bear" width="90%"></li>
-			</ul>
-		</div>
- -->
-
 		<br>
 		<div class="slides fade">
 		
 			<div class="slide-image">
 				<div class="slide-title">What are Prime Numbers?</div>
-				<center><img src="images/master-files/prime_numbers_game.png" alt="bear" width="50%"></center>
+				<center><img class="image" src="images/master-files/prime_numbers_game.png" alt="bear" width="50%"></center>
 				<div class="slide-info">here is info. lot of info is happenign
 				blah balfh info info words!</div>
 			</div>
 				
 			<div class="slide-image">
-				<div class="slide-title">HELLO 2</div>
-				<center><img src="images/brown_bear_running.jpg" alt="bear" width="50%"></center>
-				<center><div class="slide-info">here is more info</div></center>
+				<div class="slide-title">Dance Mat Typing - Computing</div>
+				<center><img class="image" src="images/master-files/dance_mat_typing.png" alt="bear" width="50%"></center>
+				<div class="slide-info">here is more info</div>
 			</div>
 			
 			<div class="slide-image">
-				<div class="slide-title">HELLO 3</div>
-				<center><img src="images/brown_bear_running.jpg" alt="bear" width="50%"></center>
+				<div class="slide-title">Karate Cats - English</div>
+				<center><img class="image" src="images/master-files/karate_cats_game.png" alt="bear" width="50%"></center>
 				<div class="slide-info">here is even more info</div>
 			</div>	
 
@@ -116,7 +101,7 @@
 
 		<div class="game-library">
 			
-			<div class="game-card">
+			<div class="game-card math-games">
 				<div class="card-top">
 					<h3>What are Prime Numbers?</h3>
 					<img class="library-image" src="images/master-files/prime_numbers_game.png" alt="bear">
@@ -128,8 +113,24 @@
 					</p>
 				</div>
 			</div>
+
+			<div class="game-card math-games">
+				<div class="card-top">
+					<h3>What are Prime Numbers? vol. 2</h3>
+					<img class="library-image" src="images/master-files/prime_numbers_game.png" alt="bear">
+				</div>
+				<div class="card-bottom">
+					<p><b>Description:</b> Sequel from the first game! Try out more prime numbers!! <br>
+					<b>Year Group: </b>Primary 6<br>
+					<b>Source: </b>BBC Bitesize.
+					</p>
+				</div>
+			</div>
 			
-			<div class="game-card">
+			<a class="card-back" onclick="plusMathCard(-1)">&#10094;</a>
+  			<a class="card-next" onclick="plusMathCard(1)">&#10095;</a>
+
+			<div class="game-card english-games">
 				<div class="card-top" style="background-color: lightskyblue;">
 					<h3>Karate Cats English</h3>
 					<img class="library-image" src="images/master-files/karate_cats_game.png" alt="bear" >
@@ -142,7 +143,10 @@
 				</div>
 			</div>
 			
-			<div class="game-card">
+			<a class="card-back" onclick="plusEnglishCard(-1)">&#10094;</a>
+			<a class="card-next" onclick="plusEnglishCard(1)">&#10095;</a>
+
+			<div class="game-card computing-games">
 				<div class="card-top" style="background-color: orange;">
 					<h3>infoinfoinfo</h3>
 					<img class="library-image" src="images/master-files/dance_mat_typing.png" alt="bear" >
@@ -155,7 +159,10 @@
 				</div>
 			</div>
 
-			<div class="game-card">
+			<a class="card-back" onclick="plusCard(-1)">&#10094;</a>
+  			<a class="card-next" onclick="plusCard(1)">&#10095;</a>
+
+			<div class="game-card geography-games">
 				<div class="card-top" style="background-color: gold;">
 					<h3>infoinfoinfo</h3>
 					<img class="library-image" src="images/master-files/pirate_bunnies_geography.png" alt="bear" >
@@ -167,6 +174,9 @@
 					</p>
 				</div>
 			</div>
+
+			<a class="card-back" onclick="plusCard(-1)">&#10094;</a>
+  			<a class="card-next" onclick="plusCard(1)">&#10095;</a>
 			
 		</div>
 
@@ -185,44 +195,10 @@
 		</footer>
 	
 		<!-- end footer -->
+
 	
-	
-	
-		<script>
-			var slidePosition = 1; 
-			SlideShow(slidePosition);
-			
-			function plusSlides(n){
-				SlideShow(slidePosition += n);
-			}
-			
-			function currentSlide(n){
-				SlideShow(slidePosition = n);
-			}
-		
-			function SlideShow(n){
-				var i;
-				var slides = document.getElementsByClassName("slide-image");
-				var circles = document.getElementsByClassName("dots");
-				if (n > slides.length) {slidePosition = 1}
-				if (n < 1) {slidePosition = slides.length}
-				for (i = 0; i < slides.length; i++){
-					slides[i].style.display  = "none"
-				}
-				for (i = 0; i < circles.length; i++){
-					circles[i].className = circles[i].className.replace(" enable", "");
-				}
-				
-				slides[slidePosition-1].style.display = "block";
-				circles[slidePosition-1].className += " enable";
-			}
-			
-		
-		
-		
-		</script>
-	
-	
+		<script src="script.js"></script>
+
 	</body>
 
 

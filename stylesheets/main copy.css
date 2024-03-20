@@ -416,49 +416,15 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	
 }
 
-.card-back {
-	display: none;
-}
-
-.card-next {
-	display: none;
-}
-
 
 @media screen and (max-width:600px){
-	.card-back {
-		display: block;
-	}
-	
-	.card-next {
-		display: block;
-	}
-
-
 	.game-library {
 		grid-template-columns: repeat(1, 1fr);
 		width: 70%;
 		margin-left: auto;
 		margin-right: auto;
 		row-gap: 20px;
-		position: relative;
-
-		grid-template-areas:
-			"math-games"
-			"english-games"
-			"computing-games"
-			"geography-games"
-
 	}
-
-	
-	.game-card {
-		display: none;
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
 
 	
 }

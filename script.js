@@ -1,3 +1,5 @@
+// ------- Nav bar dropdown ---------
+
 function myFunction() {
     var x = document.getElementById("Menu");
     if (x.className === "menu") {
@@ -13,3 +15,141 @@ function myFunction() {
         y.className = "menutop";
     }
 }
+
+
+
+// ------- Games Page Slideshow ---------
+
+
+var slidePosition = 1; 
+SlideShow(slidePosition);
+
+function plusSlides(n){
+    SlideShow(slidePosition += n);
+}
+
+function currentSlide(n){
+    SlideShow(slidePosition = n);
+}
+
+function SlideShow(n){
+    var i;
+    var slides = document.getElementsByClassName("slide-image");
+    var circles = document.getElementsByClassName("dots");
+    if (n > slides.length) {slidePosition = 1}
+    if (n < 1) {slidePosition = slides.length}
+    for (i = 0; i < slides.length; i++){
+        slides[i].style.display  = "none"
+    }
+    for (i = 0; i < circles.length; i++){
+        circles[i].className = circles[i].className.replace(" enable", "");
+    }
+    
+    slides[slidePosition-1].style.display = "block";
+    circles[slidePosition-1].className += " enable";
+}
+
+
+// ------- Games Page Sorted Games ---------
+// resizing function - https://www.w3schools.com/jsref/event_onresize.asp
+// screen width - https://www.w3schools.com/jsref/prop_screen_width.asp
+
+function execute(){
+
+    if (screen.width > 600) {
+        GameCardsDisplay(englishGames, englishGamesPosition);
+        GameCardsDisplay(mathGames, mathGamesPosition);
+    }
+
+    if (screen.width <= 600) {
+        GameCards(englishGames, englishGamesPosition);
+        GameCards(mathGames, mathGamesPosition);
+    }
+
+ }
+
+
+
+
+
+ function GameCardsDisplay(card_set, n){
+    var i;
+    var slides = document.getElementsByClassName(card_set);
+
+    for (i = 0; i < slides.length; i++){
+        slides[i].style.display  = "block"
+    }
+
+    if (card_set == "math-games"){slides[mathGamesPosition-1].style.display = "block";}
+    if (card_set == "english-games"){slides[englishGamesPosition-1].style.display = "block";}
+}
+
+
+
+var mathGamesPosition = 1; 
+var mathGames = "math-games"
+var englishGamesPosition = 1;
+var englishGames = "english-games"
+
+
+
+GameCards(mathGames, mathGamesPosition);
+GameCards(englishGames, mathGamesPosition);
+
+
+function plusMathCard(n){
+    GameCards(mathGames, mathGamesPosition += n);
+}
+
+function currentMathCard(n){
+    GameCards(mathGames, mathGamesPosition= n);
+}
+
+
+
+function plusEnglishCard(n){
+    GameCards(englishGames, englishGamesPosition += n);
+}
+
+function currentEnglishCard(n){
+    GameCards(englishGames, englishGamesPosition = n);
+}
+
+
+
+function GameCards(card_set, n){
+    var i;
+    var slides = document.getElementsByClassName(card_set);
+    if (n > slides.length) {
+        if (card_set == "math-games"){mathGamesPosition = 1}
+        if (card_set == "english-games"){englishGamesPosition = 1}
+    }
+
+    if (n < 1) {
+        if (card_set == "math-games"){mathGamesPosition = slides.length}
+        if (card_set == "english-games"){englishGamesPosition = slides.length}
+    }
+    for (i = 0; i < slides.length; i++){
+        slides[i].style.display  = "none"
+    }
+
+    if (card_set == "math-games"){slides[mathGamesPosition-1].style.display = "block";}
+    if (card_set == "english-games"){slides[englishGamesPosition-1].style.display = "block";}
+}
+
+// function SlideShow(n){
+//     var i;
+//     var slides = document.getElementsByClassName("slide-image");
+//     var circles = document.getElementsByClassName("dots");
+//     if (n > slides.length) {slidePosition = 1}
+//     if (n < 1) {slidePosition = slides.length}
+//     for (i = 0; i < slides.length; i++){
+//         slides[i].style.display  = "none"
+//     }
+//     for (i = 0; i < circles.length; i++){
+//         circles[i].className = circles[i].className.replace(" enable", "");
+//     }
+    
+//     slides[slidePosition-1].style.display = "block";
+//     circles[slidePosition-1].className += " enable";
+// }
