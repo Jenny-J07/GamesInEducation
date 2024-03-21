@@ -422,26 +422,10 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	
 }
 
-.card-back {
-	display: none;
-}
-
-.card-next {
-	display: none;
-}
 
 
 
 @media screen and (max-width:600px){
-	.card-back {
-		display: block;
-	}
-	
-	.card-next {
-		display: block;
-	}
-
-
 	.game-library {
 		grid-template-columns: repeat(1, 1fr);
 		width: 70%;
@@ -455,10 +439,8 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 			"english-games"
 			"computing-games"
 			"geography-games"
-
 	}
 
-	
 	.game-card {
 		display: none;
 		width: 90%;
@@ -466,10 +448,43 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 		margin-right: auto;
 	}
 
+	/* Here in lies the problem */
 
 	
 }
 
+.card-slide-buttons{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	text-align: center;
+}
+
+.card-back, .card-next {
+	padding: 10px 10px 10px 10px;
+	color: black;
+	font-weight: bold;
+	font-size: 19px;
+	transition: 0.4s ease;
+	border-radius: 5px 5px 5px 5px;
+	background-color: lightgray;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-back:hover, .card-next:hover {
+	background-color: grey;
+}
+
+
+@media screen and (min-width:600px){
+	.card-slide-buttons {
+		display: none;
+	}
+}
+
+
+/* ---------------------------------------- */ 
+/* -------------- Game Card --------------- */ 
+/* ---------------------------------------- */ 
 .game-card {
 	/* flex-basis: calc(33.333% - 20px); */
 	/* border-style: solid;  */
@@ -488,7 +503,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 
 }
 
-
 .game-library img {
 	width: 90%;
 	margin-left: auto;
@@ -496,7 +510,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	display: block;
 	margin-bottom: 10px;
 }
-
 
 .game-library p{
 	padding: 6px;
@@ -507,6 +520,9 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	margin-left: 10px;
 	
 }
+
+
+
 
 
 /* ----------------------------------------- */ 
