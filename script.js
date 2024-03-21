@@ -53,18 +53,20 @@ function SlideShow(n){
 // ------- Games Page Sorted Games ---------
 // resizing function - https://www.w3schools.com/jsref/event_onresize.asp
 // screen width - https://www.w3schools.com/jsref/prop_screen_width.asp
+// refresh when screen resized - https://stackoverflow.com/questions/14915653/refresh-page-on-resize-with-javascript-or-jquery
+
 
 function execute(){
 
     if (screen.width > 600) {
-        GameCardsDisplay(englishGames, englishGamesPosition);
-        GameCardsDisplay(mathGames, mathGamesPosition);
-    }
-
-    if (screen.width <= 600) {
+        GameCardsDisplay(englishGames);
+        GameCardsDisplay(mathGames);
+    } else if (screen.width <= 600) {
         GameCards(englishGames, englishGamesPosition);
         GameCards(mathGames, mathGamesPosition);
     }
+
+    // location.reload(); 
 
  }
 
@@ -72,7 +74,7 @@ function execute(){
 
 
 
- function GameCardsDisplay(card_set, n){
+ function GameCardsDisplay(card_set){
     var i;
     var slides = document.getElementsByClassName(card_set);
 

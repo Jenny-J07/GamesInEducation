@@ -210,8 +210,9 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 
-
+/* ----------------------------------------- */ 
 /* ------------- Benefit Cards ------------- */ 
+/* ----------------------------------------- */ 
 
 .benefit-box {
 	display: grid;
@@ -272,8 +273,9 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 
 
 
-
-/* ------------- Image slideshow ------------- */ 
+/* ------------------------------------------ */ 
+/* ------------- Image slideshow ------------ */ 
+/* ------------------------------------------ */ 
 
 .slides {
 	position: relative;
@@ -391,7 +393,10 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 
+
+/* ---------------------------------------- */ 
 /* ------------- Game Library ------------- */ 
+/* ---------------------------------------- */ 
 
 
 .game-library {
@@ -400,6 +405,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	row-gap: 10px;
 	column-gap: 15px;
 }
+
 
 @media screen and (max-width:1000px){
 	.game-library {
@@ -423,6 +429,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 .card-next {
 	display: none;
 }
+
 
 
 @media screen and (max-width:600px){
@@ -502,8 +509,9 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 
-
+/* ----------------------------------------- */ 
 /* ------------- Dropdown text ------------- */ 
+/* ----------------------------------------- */ 
 
 .slide-info {
 	display: none;

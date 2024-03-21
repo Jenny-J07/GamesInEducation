@@ -99,7 +99,7 @@
 		<br><br>
 		<h2>Game Library:</h2>
 
-		<div class="game-library">
+		<div class="game-library" onresize="execute()"> 
 			
 			<div class="game-card math-games">
 				<div class="card-top">
@@ -198,6 +198,15 @@
 
 	
 		<script src="script.js"></script>
+
+
+		<script> 
+			// On first load - https://www.geeksforgeeks.org/how-to-run-a-function-when-the-page-is-loaded-in-javascript/
+			window.onload = execute();
+
+		</script> 
+
+
 
 	</body>
 
