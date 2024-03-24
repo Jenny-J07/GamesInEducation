@@ -56,12 +56,14 @@ function SlideShow(n){
 // refresh when screen resized - https://stackoverflow.com/questions/14915653/refresh-page-on-resize-with-javascript-or-jquery
 
 
+// screen.width
+
 function execute(){
 
-    if (screen.width > 600) {
+    if (window.innerWidth > 600) {
         GameCardsDisplay(englishGames);
         GameCardsDisplay(mathGames);
-    } else if (screen.width <= 600) {
+    } else if (window.innerWidth <= 600) {
         GameCards(englishGames, englishGamesPosition);
         GameCards(mathGames, mathGamesPosition);
     }
