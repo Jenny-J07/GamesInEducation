@@ -157,3 +157,24 @@ function GameCards(card_set, n){
 //     slides[slidePosition-1].style.display = "block";
 //     circles[slidePosition-1].className += " enable";
 // }
+
+
+
+
+
+// const observer = new IntersectionObserver(entries => {
+//     // Loop over the entries
+//     entries.forEach(entry => {
+//       // If the element is visible
+//       if (entry.isIntersecting) {
+//         // Add the animation class
+//         entry.target.classList.add('benefit-box-animation');
+//       }
+//     });
+//   });
+  
+//   observer.observe(document.querySelector('.benefit-box'));
+
+
+
+

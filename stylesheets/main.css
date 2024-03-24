@@ -12,6 +12,7 @@ html {
 
 body {
 	font-family: "Nunito Sans", sans-serif;
+	margin: 0;
 }
  
 
@@ -97,6 +98,7 @@ footer {
         height: 100%;
         transition: .2s linear;
 		padding-top: 13px;
+		padding-left: 5%;
     }
 
     
@@ -120,7 +122,7 @@ footer {
 
 	.menu .menu-item a {
 		color: white;
-		font-size: 19px;
+		font-size: 21px;
 		text-decoration: none;
 	}
 
@@ -128,7 +130,15 @@ footer {
 		font-size: 23px;
 	}
 
+@media screen and (max-width: 1000px){
+	.menu .menu-item a {
+		font-size: 18px;
+	}
 
+	.menu .menu-item {
+		padding-top: 15px;
+    }
+}
 
 
 @media screen and (max-width: 600px){
@@ -257,7 +267,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 
 /* Box-shadow - https://www.w3schools.com/css/css3_shadows.asp */
 
-.benefit-box {
+/* .benefit-box {
 	display: grid;
 	grid-template-rows: auto;
 	border-radius: 10px 10px;
@@ -265,9 +275,9 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
 	margin-left: auto;
 	margin-right: auto;
-}
+} */
 
-.benefit-box-top img{
+/* .benefit-box-top img{
 	width: 100%;
 	border-radius: 10px 10px 0px 0px;
 }
@@ -275,7 +285,42 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 .benefit-box-bottom {
 	background-color: white;
 	border-radius: 0px 0px 10px 10px;
+} */
+
+
+/* fix image layout - https://stackoverflow.com/questions/50542629/make-image-fit-css-grid */
+
+.benefit-box {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	border-radius: 10px 10px 10px 10px;
+	width: 70%;
+	box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-left: auto;
+	margin-right: auto;
 }
+
+.benefit-box img{
+	aspect-ratio: 2/1;
+  	object-fit: cover;
+  	height: 100%;
+  	max-width: 100%;
+	width: 100%;
+}
+
+.benefit-box .benefit-box-top img {
+	border-radius: 10px 0px 0px 10px;
+}
+
+.benefit-box .benefit-box-bottom img {
+	border-radius: 0px 10px 10px 0px;
+}
+
+.benefit-box-bottom {
+	background-color: white;
+	border-radius: 0px 10px 10px 0px;
+}
+
 
 .padding {
 	padding-left: 10px;
@@ -287,22 +332,42 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 .benefit-page {
+	margin-top: 10vh;
+	margin-bottom: 10vh;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	row-gap: 30px;
+	grid-template-columns: 1fr;
+	row-gap: 100px;
 }
 
 @media screen and (max-width:800px){
-	.benefit-page {
+	/* .benefit-page {
 		grid-template-columns: repeat(1, 1fr);
-	}
+	} */
 
 	.benefit-box{
 		width: 80%;
 	}
-
 }
 
+@media screen and (max-width:600px){
+	.benefit-box {
+		display: grid;
+		grid-template-columns: 1fr;
+		border-radius: 10px 10px 10px 10px;
+		width: 70%;
+		box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.benefit-box img{
+		width: 100%;
+	}
+
+	.benefit-box-top {
+		border-radius: 10px 10px 0px 0px;
+	}
+	
+}
 
 
 
@@ -617,4 +682,45 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	display: block;
 }
 
+
+
+
+/* ------------------------------------------------- */ 
+/* ------------- Benefit box animation ------------- */ 
+/* ------------------------------------------------- */ 
+
+
+
+@keyframes wipe-enter {
+	0% {
+		transform: scale(0, .025);
+	}
+	50% {
+		transform: scale(1, .025);
+	}
+}
+
+
+
+/* @media (prefers-reduced-motion: no-preference) {
+	.benefit-box {
+	  animation-name: wipe-enter;
+	  animation-duration: 1s;
+	  animation-iteration-count: infinite;
+	}
+} */
+
+
+/* @media (prefers-reduced-motion: no-preference) {
+	.benefit-box {
+		animation: wipe-enter 1s infinite;
+	}
+} */
+
+  
+@media (prefers-reduced-motion: no-preference) {
+	.benefit-box-animation {
+		animation: wipe-enter 1s 1;
+	}
+}
 
