@@ -183,13 +183,15 @@ footer {
 	  padding-bottom: 20px;
 	}
 
-
-
 	.menu.responsiveMenu{
 		height: 100%;
 		width: 100%;
 		background-color: black;
 	  }
+
+	.home {
+		margin-top: 6%;
+	}
 
   }
 
@@ -221,17 +223,51 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 
 .grid-container {
 	display: grid;
-	row-gap: 10px;
+	row-gap: 3%;
+	margin-bottom: 30%;
+}
+
+.about-text {
+	padding: 5%;
+	font-size: 18px;
+	padding-top: 0;
 }
 
 
+@media screen and (max-width: 1000px){
+	.about-text {
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 750px){
+	.about-text {
+		font-size: 18px;
+		padding-bottom: 1%;
+	}
+}
 
 
+.benefit-png {
+	width: 20%;
+}
+
+.benefit-text {
+	padding-left: 15%;
+	padding-right: 15%;
+}
 
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 750px){
+
+	.benefit-text {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
 
 	.grid-container {
+		margin-bottom: 10%;
+		row-gap: 8%;
 		grid-template-columns: repeat(6, 1fr);
 		grid-template-areas:
 			"a a a b b b"
@@ -258,6 +294,11 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 		grid-area: e;
 	}
 	
+	.benefit-png {
+		width: 30%;
+	}
+
+
 }
 
 
@@ -308,13 +349,18 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	width: 100%;
 }
 
-.benefit-box .benefit-box-top img {
-	border-radius: 10px 0px 0px 10px;
+@media screen and (min-width:600px){
+	.benefit-box .benefit-box-top img {
+		border-radius: 10px 0px 0px 10px;
+	}
 }
 
-.benefit-box .benefit-box-bottom img {
+
+
+
+/* .benefit-box .benefit-box-bottom img {
 	border-radius: 0px 10px 10px 0px;
-}
+} */
 
 .benefit-box-bottom {
 	background-color: white;
@@ -340,10 +386,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 @media screen and (max-width:800px){
-	/* .benefit-page {
-		grid-template-columns: repeat(1, 1fr);
-	} */
-
 	.benefit-box{
 		width: 80%;
 	}
@@ -359,19 +401,27 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 		margin-left: auto;
 		margin-right: auto;
 	}
-	.benefit-box img{
+
+	.benefit-box .benefit-box-top img{
 		width: 100%;
+		border-radius: 10px 10px 0px 0px;
+
 	}
 
-	.benefit-box-top {
-		border-radius: 10px 10px 0px 0px;
+	.benefit-box-bottom {
+		border-radius: 10px 10px 10px 10px;
 	}
 	
 }
 
 
 
-/* This is used for the heading of each lab task to centre it and colour the background */
+.benefit-box-bottom h2 {
+	font-size: 1.5em;
+}
+
+
+
 .title {
 	text-align: center;
 	padding: 22px;
@@ -689,7 +739,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 /* ------------- Benefit box animation ------------- */ 
 /* ------------------------------------------------- */ 
 
-
+/* code for box animation - https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/ */
 
 @keyframes wipe-enter {
 	0% {

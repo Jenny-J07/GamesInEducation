@@ -14,6 +14,14 @@ function myFunction() {
     } else {
         y.className = "menutop";
     }
+
+    var icon = document.getElementById("icon");
+    if (icon.className === "fa fa-bars") {
+        icon.className = "fa fa-close";
+    } else {
+        icon.className = "fa fa-bars";
+    }
+    
 }
 
 
