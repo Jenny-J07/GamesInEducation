@@ -21,8 +21,21 @@ function myFunction() {
     } else {
         icon.className = "fa fa-bars";
     }
-    
 }
+
+
+// ---------- How To Box ------------
+
+function cardFlip(card) {
+    if (card.className === "info-box info-card-front") {
+        card.className = "info-box info-card-back";
+    } else {
+        card.className = "info-box info-card-front";
+    }
+}
+
+
+
 
 
 
@@ -169,20 +182,39 @@ function GameCards(card_set, n){
 
 
 
-
-// const observer = new IntersectionObserver(entries => {
-//     // Loop over the entries
-//     entries.forEach(entry => {
-//       // If the element is visible
-//       if (entry.isIntersecting) {
-//         // Add the animation class
-//         entry.target.classList.add('benefit-box-animation');
-//       }
+// docuent.addEventListener('DOMContentLoader', () => {
+//     const observer = new IntersectionObserver(entries => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 entry.target.classList.add('benefit-box-animation');
+//             }
+//         });
+//     }, {
+//         // observer.observe(document.querySelector('.benefit-box'));
+//         threshold: 0.1
 //     });
-//   });
-  
-//   observer.observe(document.querySelector('.benefit-box'));
+
+//     document.querySelectorAll('.benefit-box').forEach(section => {
+//         observer.observe(section);
+//     });
+// });
 
 
 
 
+docuent.addEventListener('DOMContentLoader', () => {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        // observer.observe(document.querySelector('.benefit-box'));
+        threshold: 0.1
+    });
+
+    document.querySelectorAll('.benefit-zoom').forEach(section => {
+        observer.observe(section);
+    });
+});
