@@ -14,6 +14,18 @@ body {
 	font-family: "Nunito Sans", sans-serif;
 	margin: 0;
 }
+
+:root {
+	box-sizing: border-box;
+}
+
+*,
+::before
+::after{
+	box-sizing: inherit;
+}
+
+
  
 
  
@@ -69,11 +81,12 @@ footer {
 
 
 
-
+/* ----------------------------------------- */ 
+/* ------------- Navigation Bar ------------ */ 
+/* ----------------------------------------- */ 
 
 
 /* Styles for screens with a minimum width of 600 pixels */
-    
 
 	.menu {
         height: 50px;
@@ -81,8 +94,6 @@ footer {
         font-family: Arial;
         overflow: hidden;
     }
-
-
 
     .menu .menutop {
         padding-left: 20px;
@@ -131,6 +142,14 @@ footer {
 	.menutop .home a{
 		font-size: 23px;
 	}
+
+.active {
+	color: rgb(57, 178, 219) !important;
+	font-weight: 600;
+}
+
+
+
 
 @media screen and (max-width: 1000px){
 	.menu .menu-item a {
@@ -209,17 +228,6 @@ https://stackoverflow.com/questions/47614008/can-i-have-a-varying-number-of-colu
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 */
-
-:root {
-	box-sizing: border-box;
-}
-
-*,
-::before
-::after{
-	box-sizing: inherit;
-}
-
 
 
 
@@ -393,8 +401,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 
-
-
 /* .benefit-box .benefit-box-bottom img {
 	border-radius: 0px 10px 10px 0px;
 } */
@@ -447,16 +453,12 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 
 	.benefit-box-bottom {
 		border-radius: 10px 10px 10px 10px;
-	}
-	
+	}	
 }
-
-
 
 .benefit-box-bottom h2 {
 	font-size: 1.5em;
 }
-
 
 
 .title {
@@ -489,7 +491,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 		width: 100%;
 	}
 }
-
 
 .image {
 	box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
@@ -548,7 +549,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 
-
 .dots {
   cursor: pointer;
   height: 16px;
@@ -566,8 +566,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
   opacity: 1;
 }
 
-
-
 .fade {
 	-webkit-animation-name: fade;
 	-webkit-animation-duration: 1.4s;
@@ -575,7 +573,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	animation-duration: 1.4s;
 
 }
-
 
 @-webkit-keyframes fade {
 	from {opacity: .5}
@@ -602,23 +599,25 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	padding: 10px;
 }
 
+.library-heading{
+	margin-left: 15px;
+	font-size: 25px;
+}
+
+
 
 @media screen and (max-width:1000px){
 	.game-library {
 		grid-template-columns: repeat(3, 1fr);
 	}
-	
 }
 
 
 @media screen and (max-width:800px){
 	.game-library {
 		grid-template-columns: repeat(2, 1fr);
-	}
-	
+	}	
 }
-
-
 
 
 @media screen and (max-width:600px){
@@ -671,13 +670,12 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	background-color: grey;
 }
 
-
 .game-content-heading {
-	font-size: 20px;
+	font-size: 22px;
 	margin-bottom: -10px;
 	font-weight: bold;
+	margin-left: 10px;
 }
-
 
 @media screen and (min-width:600px){
 	.card-slide-buttons {
@@ -690,9 +688,12 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 
+
+
 /* ---------------------------------------- */ 
 /* -------------- Game Card --------------- */ 
 /* ---------------------------------------- */ 
+
 .game-card {
 	width: 95%;
 	display: grid;
@@ -700,7 +701,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
 	
 }
-
 
 /* hovering(de-hovering) - https://stackoverflow.com/questions/10995165/what-is-the-opposite-of-hover-on-mouse-leave */
 .game-card:hover {
@@ -787,8 +787,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	}
 }
 
-
-
 /* @media (prefers-reduced-motion: no-preference) {
 	.benefit-box {
 	  animation-name: wipe-enter;
@@ -814,10 +812,10 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 
 
 
+
 /* --------------------------------------------- */ 
 /* ------------- How To Page Grids ------------- */ 
 /* --------------------------------------------- */ 
-
 
 .how-to-page {
 	display: grid;
@@ -862,7 +860,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 
-
 .info-box.info-card-front>.info-heading{
 	display: block;
 }
@@ -870,7 +867,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 .info-box.info-card-front>.info-text{
 	display: none;
 }
-
 
 .info-box.info-card-back>.info-heading{
 	display: none;
@@ -908,4 +904,47 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	}
 
 }
+
+
+
+
+
+/* ---------------------------------------------------- */ 
+/* ------------- Appear on scroll attempt ------------- */ 
+/* ---------------------------------------------------- */ 
+/* =========================== */
+
+.content-block {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+
+.content-block.visible{
+	opacity: 1;
+	transform: translateY(0);
+}
+
+
+
+/* ------------------------------------------------ */ 
+/* ------------- Scroll to top button ------------- */ 
+/* ------------------------------------------------ */ 
+
+.scroll-button {
+	background-color: grey;
+	color: white;
+	text-align: center;
+	padding: 8px 15px;
+	margin: 4px 2px;
+	opacity: 0.6;
+	transition: 0.3s;
+	text-decoration: none;
+}
+
+.scroll-button:hover {
+	opacity: 1;
+}
+
 
