@@ -949,3 +949,44 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 
+
+
+/* ---------------------------------------------- */ 
+/* --------------- Resources Page --------------- */ 
+/* ---------------------------------------------- */ 
+.about-resources {
+	padding-left: 20px;
+	padding-bottom: 20px;
+}
+
+.resources-library {
+	padding-left: 20px;
+}
+
+.resource-section {
+	padding-bottom: 10px;
+	padding-right: 20px;
+}
+
+
+.resource-table{
+	border-collapse: collapse;
+	width: 100%;
+	padding: 10px;
+  }
+  
+.table-row td, th{
+	border: 1.2px solid black;
+	text-align: left;
+	padding: 8px;
+}
+
+.table-heading {
+	text-align: center;
+	background-color: lightgray;
+	font-size: 18px;
+}
+
+.table-heading, th {
+	text-align: center !important;
+}
