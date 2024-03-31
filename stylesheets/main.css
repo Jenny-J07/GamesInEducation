@@ -823,7 +823,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	row-gap: 15%;
 	column-gap: 1%;
 	margin: 5%;
-	margin-bottom: 18%;
+	padding-bottom: 20%;
 }
 
 .info-box {
@@ -878,6 +878,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 
 
 @media screen and (max-width:1000px){
+
 	.info-box {
 		padding: 4%;
 		width: 80%;
@@ -896,7 +897,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 		grid-template-columns: repeat(1, 1fr);
 		row-gap: 5%;
 		margin: 5%;
-		margin-bottom: 25%;
+		padding-bottom: 50%;
 	}
 
 	.info-box {
