@@ -271,6 +271,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 .benefit-text {
 	padding-left: 15%;
 	padding-right: 15%;
+	margin-bottom: 0;
 }
 
 
@@ -280,6 +281,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	.benefit-text {
 		padding-left: 10%;
 		padding-right: 10%;
+		margin-bottom: 0;
 	}
 
 	.grid-container {
@@ -408,6 +410,11 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 .benefit-box-bottom {
 	background-color: white;
 	border-radius: 0px 10px 10px 0px;
+	padding: 2px 8px 2px 8px;
+}
+
+.benefit-box-bottom p {
+	font-size: 1.15em;
 }
 
 
@@ -457,7 +464,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 .benefit-box-bottom h2 {
-	font-size: 1.5em;
+	font-size: 1.55em;
 }
 
 
@@ -481,9 +488,37 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 
 .slide-image {
 	display: none;
-	width: 90%;
+	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+@media screen and (max-width: 1000px){
+	.slide-image {
+		width: 90%;
+	}
+
+	.back {
+		left: 22% !important;
+	}
+	
+	.next {
+		right: 22% !important;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.slide-image {
+		width: 100%;
+	}
+
+	.back {
+		left: 17% !important;
+	}
+	
+	.next {
+		right: 17% !important;
+	}
 }
 
 @media screen and (max-width: 600px){
@@ -510,22 +545,22 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	position: absolute;
 	top: 48%;
 	width: auto;
-	margin-top: -23px;
-	padding: 17px;
+	margin-top: 19px;
+	padding: 16px;
 	color: black;
 	font-weight: bold;
-	font-size: 19px;
+	font-size: 23px;
 	transition: 0.4s ease;
 	border-radius: 5px 5px 5px 5px;
 	user-select: none;
 }
 
 .back {
-	left: 23%;
+	left: 25%;
 }
 
 .next {
-	right: 23%;
+	right: 25%;
 }
 
 .back:hover, .next:hover {
@@ -749,6 +784,10 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	padding-bottom: 10px;
 }
 
+.card-top h3 {
+	padding-top: 10px;
+}
+
 .game-library h3{
 	margin-top: 0;
 	margin-left: 10px;
@@ -970,6 +1009,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	padding: 15px;
 	border-radius: 5px 5px 5px 5px;
 	margin: 10px;
+	box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.1), 0 5px 10px 0 rgba(0, 0, 0, 0.17);
 
 }
 
