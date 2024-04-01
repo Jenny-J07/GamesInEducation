@@ -487,8 +487,11 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 @media screen and (max-width: 600px){
-	.slide-image {
-		width: 100%;
+	.slides {
+		display: none;
+	}
+	.slide-dots {
+		display: none;
 	}
 }
 
@@ -960,12 +963,14 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 .resources-library {
-	padding-left: 20px;
+	margin: 10px;
 }
 
 .resource-section {
-	padding-bottom: 10px;
-	padding-right: 20px;
+	padding: 15px;
+	border-radius: 5px 5px 5px 5px;
+	margin: 10px;
+
 }
 
 
@@ -979,14 +984,27 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	border: 1.2px solid black;
 	text-align: left;
 	padding: 8px;
+	background-color: white;
 }
 
-.table-heading {
-	text-align: center;
-	background-color: lightgray;
-	font-size: 18px;
-}
 
 .table-heading, th {
 	text-align: center !important;
+	background-color: lightgrey;
+	font-size: 18px;
+}
+
+.resource-heading {
+	font-size: 23px;
+	font-weight: 700;
+}
+
+.background-color-1 {
+	background-color: rgba(351, 100, 60, 0.2);
+}
+
+
+.background-color-2 {
+	/* background-color: hsl(195, 53%, 79%); */
+	background-color: hsl(195, 53%, 79%, 0.2);
 }
