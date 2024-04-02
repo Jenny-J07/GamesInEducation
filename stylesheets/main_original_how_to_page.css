@@ -116,7 +116,8 @@ footer {
 
     
     .menu .menu-item a:hover {
-        color: #dd5771;
+        /* color: #dd5771; */
+		color: #43AA8B;
         font-weight: 700;
         transform: translateY(-3px);
     }
@@ -144,7 +145,7 @@ footer {
 	}
 
 .active {
-	color: #FCDF9C !important;
+	color: #8CC9E3 !important;
 	font-weight: 600;
 }
 
@@ -333,7 +334,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	.benefit-zoom:hover {
 		transform: scale(1.05);
 		transition: 0.4s ease-in-out;
-		background-color: #ffb6c1;
+		background-color: lightpink;
 	}
 	
 	.benefit-zoom:not(:hover) {  
@@ -471,7 +472,8 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 .title {
 	text-align: center;
 	padding: 22px;
-	background-color: #f6efef;
+	/* background-color: #f6efef; */
+	background-color: #BDE0EF;
 }
 
 
@@ -862,62 +864,64 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 .how-to-page {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-
-	margin: 10px;
-
-	/* display: flex;
-	flex-direction: column;
-	
-	row-gap: 13%;
-	column-gap: 0.5%;
+	row-gap: 15%;
+	column-gap: 1%;
 	margin: 5%;
-	padding-bottom: 20%; */
-}
-
-.info-column {
-	/* display: flex;
-	flex-direction: column; */
-	display: grid;
-	grid-template-columns: repeat(1, 1fr);
-
-
-	row-gap: 1%;
-	margin: 3%;
+	padding-bottom: 20%;
 }
 
 .info-box {
-	/* margin: auto; */
-	padding: 0 20px 0 20px;
-	margin-bottom: 30px;
 	padding: 4%;
-	width: 90%;
-	box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
-	text-align: center;
-	background-color: #FCDF9C;
-
-}
-
-.info-image {
+	width: 80%;
+	display: grid;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
 	margin-left: auto;
 	margin-right: auto;
-	width: 50%;
-	padding-bottom: 10px;
+	text-align: center;
+	height: 13em;
 }
+
+.info-card-front {
+	background-color: rgb(232, 122, 122);
+}
+
+.info-card-back {
+	background-color: lightpink;
+}
+
 
 .info-heading{
-	font-size: 25px;
-	font-weight: 650;
-	font-family: "Raleway", sans-serif;;
+	font-size: 20px;
+	margin-top: auto;
+	margin-bottom: auto;
+	/* margin: 4%; */
 }
 
-.info-text{
-	font-size: 19px;
-	text-align: left !important;
-	padding-top: 10px;
+.info-text {
+	display: none;
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
 
-/* @media screen and (max-width:1000px){
+.info-box.info-card-front>.info-heading{
+	display: block;
+}
+
+.info-box.info-card-front>.info-text{
+	display: none;
+}
+
+.info-box.info-card-back>.info-heading{
+	display: none;
+}
+
+.info-box.info-card-back>.info-text{
+	display: block;
+}
+
+
+@media screen and (max-width:1000px){
 
 	.info-box {
 		padding: 4%;
@@ -930,35 +934,18 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 		height: 10em;
 	}
 
-} */
-
-@media screen and (max-width:900px){
-
-	.how-to-page {
-		grid-template-columns: repeat(1, 1fr);
-		margin: 5%;
-		padding-bottom: 10%;
-	}
-
-	.info-box{
-		width: 75%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
 }
 
-
-@media screen and (max-width:700px){
-
-	/* .how-to-page {
+@media screen and (max-width:750px){
+	.how-to-page {
 		grid-template-columns: repeat(1, 1fr);
+		row-gap: 5%;
 		margin: 5%;
-		padding-bottom: 10%;
-	} */
+		padding-bottom: 50%;
+	}
 
-	.info-box{
-		width: 90%;
+	.info-box {
+		height: 8em;
 	}
 
 }
