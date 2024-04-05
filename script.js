@@ -84,13 +84,16 @@ function execute(){
     if (window.innerWidth > 600) {
         GameCardsDisplay(englishGames);
         GameCardsDisplay(mathGames);
+        GameCardsDisplay(computingGames);
+        GameCardsDisplay(geographyGames);
     } else if (window.innerWidth <= 600) {
         GameCards(englishGames, englishGamesPosition);
         GameCards(mathGames, mathGamesPosition);
+        GameCards(computingGames, computingGamesPosition);
+        GameCards(geographyGames, geographyGamesPosition);
     }
 
     // location.reload(); 
-
  }
 
 
@@ -107,6 +110,8 @@ function execute(){
 
     if (card_set == "math-games"){slides[mathGamesPosition-1].style.display = "block";}
     if (card_set == "english-games"){slides[englishGamesPosition-1].style.display = "block";}
+    if (card_set == "computing-games"){slides[computingGamesPosition-1].style.display = "block";}
+    if (card_set == "geography-games"){slides[geographyGamesPosition-1].style.display = "block";}
 }
 
 
@@ -115,31 +120,32 @@ var mathGamesPosition = 1;
 var mathGames = "math-games"
 var englishGamesPosition = 1;
 var englishGames = "english-games"
-
+var computingGamesPosition = 1;
+var computingGames = "computing-games"
+var geographyGamesPosition = 1;
+var geographyGames = "geography-games"
 
 
 GameCards(mathGames, mathGamesPosition);
-GameCards(englishGames, mathGamesPosition);
+GameCards(englishGames, englishGamesPosition);
+GameCards(computingGames, computingGamesPosition);
+GameCards(geographyGames, geographyGamesPosition);
 
 
-function plusMathCard(n){
-    GameCards(mathGames, mathGamesPosition += n);
-}
-
-function currentMathCard(n){
-    GameCards(mathGames, mathGamesPosition= n);
-}
+function plusMathCard(n){GameCards(mathGames, mathGamesPosition += n);}
+function currentMathCard(n){GameCards(mathGames, mathGamesPosition= n);}
 
 
+function plusEnglishCard(n){GameCards(englishGames, englishGamesPosition += n);}
+function currentEnglishCard(n){GameCards(englishGames, englishGamesPosition = n);}
 
-function plusEnglishCard(n){
-    GameCards(englishGames, englishGamesPosition += n);
-}
 
-function currentEnglishCard(n){
-    GameCards(englishGames, englishGamesPosition = n);
-}
+function plusComputingCard(n){GameCards(computingGames, computingGamesPosition += n);}
+function currentComputingCard(n){GameCards(computingGames, computingGamesPosition = n);}
 
+
+function plusGeographyCard(n){GameCards(geographyGames, geographyGamesPosition += n);}
+function currentGeographyCard(n){GameCards(geographyGames, geographyGamesPosition = n);}
 
 
 function GameCards(card_set, n){
@@ -148,11 +154,15 @@ function GameCards(card_set, n){
     if (n > slides.length) {
         if (card_set == "math-games"){mathGamesPosition = 1}
         if (card_set == "english-games"){englishGamesPosition = 1}
+        if (card_set == "computing-games"){computingGamesPosition = 1}
+        if (card_set == "geography-games"){geographyGamesPosition = 1}
     }
 
     if (n < 1) {
         if (card_set == "math-games"){mathGamesPosition = slides.length}
         if (card_set == "english-games"){englishGamesPosition = slides.length}
+        if (card_set == "computing-games"){computingGamesPosition = slides.length}
+        if (card_set == "geography-games"){geographyGamesPosition = slides.length}
     }
     for (i = 0; i < slides.length; i++){
         slides[i].style.display  = "none"
@@ -160,44 +170,12 @@ function GameCards(card_set, n){
 
     if (card_set == "math-games"){slides[mathGamesPosition-1].style.display = "block";}
     if (card_set == "english-games"){slides[englishGamesPosition-1].style.display = "block";}
+    if (card_set == "computing-games"){slides[computingGamesPosition-1].style.display = "block";}
+    if (card_set == "geography-games"){slides[geographyGamesPosition-1].style.display = "block";}
 }
 
-// function SlideShow(n){
-//     var i;
-//     var slides = document.getElementsByClassName("slide-image");
-//     var circles = document.getElementsByClassName("dots");
-//     if (n > slides.length) {slidePosition = 1}
-//     if (n < 1) {slidePosition = slides.length}
-//     for (i = 0; i < slides.length; i++){
-//         slides[i].style.display  = "none"
-//     }
-//     for (i = 0; i < circles.length; i++){
-//         circles[i].className = circles[i].className.replace(" enable", "");
-//     }
-    
-//     slides[slidePosition-1].style.display = "block";
-//     circles[slidePosition-1].className += " enable";
-// }
 
 
-
-
-// docuent.addEventListener('DOMContentLoader', () => {
-//     const observer = new IntersectionObserver(entries => {
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 entry.target.classList.add('benefit-box-animation');
-//             }
-//         });
-//     }, {
-//         // observer.observe(document.querySelector('.benefit-box'));
-//         threshold: 0.1
-//     });
-
-//     document.querySelectorAll('.benefit-box').forEach(section => {
-//         observer.observe(section);
-//     });
-// });
 
 
 
@@ -220,27 +198,6 @@ docuent.addEventListener('DOMContentLoader', () => {
 });
 
 
-
-
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     const observer = new IntersectionObserver(entries => {
-//         console.log("start")
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 console.log("in - if")
-//                 entry.target.classList.add('visible');
-//             }
-//         });
-//     }, {
-//         threshold: 0.1
-//     });
-
-//     document.querySelectorAll('.section').forEach(section => {
-//         console.log("hello there")
-//         observer.observe(section);
-//     });
-// });
 
 
 

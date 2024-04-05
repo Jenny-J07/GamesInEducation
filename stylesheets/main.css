@@ -76,6 +76,11 @@ footer {
 	font-size: 13px;
 }
 
+footer a{
+	color: white;
+	text-decoration: none;
+}
+
 
 
 
@@ -144,7 +149,7 @@ footer {
 	}
 
 .active {
-	color: #FACC61 !important;
+	color: #59afff !important;
 	font-weight: 600;
 }
 
@@ -153,7 +158,7 @@ footer {
 
 @media screen and (max-width: 1000px){
 	.menu .menu-item a {
-		font-size: 18px;
+		font-size: 20px;
 	}
 
 	.menu .menu-item {
@@ -246,8 +251,8 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 
 .about-text a {
 	color: darkmagenta;
-	text-decoration: none;
-	font-weight: 600;
+	text-decoration: underline;
+	font-weight: 620;
 }
 
 @media screen and (max-width: 1000px){
@@ -256,7 +261,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	}
 }
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 900px){
 	.about-text {
 		font-size: 18px;
 		padding-bottom: 1%;
@@ -278,7 +283,8 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 
 
 
-@media screen and (min-width: 750px){
+
+@media screen and (min-width: 900px){
 
 	.benefit-text {
 		padding-left: 10%;
@@ -478,11 +484,15 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 
 .title {
 	text-align: center;
-	padding: 22px;
+	padding: 20px;
 	background-color: #f6efef;
 }
 
-
+.page-title {
+	padding: 13px;
+	padding-bottom: 5px; 
+	text-align: center;
+}
 
 
 /* ------------------------------------------ */ 
@@ -499,6 +509,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
+	padding-bottom: 10px;
 }
 
 @media screen and (max-width: 1000px){
@@ -576,7 +587,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 .slide-title {
-	font-size: 20px;
+	font-size: 23px;
 	padding: 10px 14px;
 	text-align: center;
 }
@@ -644,7 +655,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 .library-heading{
-	margin-left: 15px;
+	margin-left: 25px;
 	font-size: 25px;
 }
 
@@ -675,7 +686,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 		width: 70%;
 		margin-left: auto;
 		margin-right: auto;
-		row-gap: 20px;
+		row-gap: 28px;
 		position: relative;
 
 		grid-template-areas:
@@ -744,11 +755,12 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 /* ---------------------------------------- */ 
 
 .game-card {
-	width: 95%;
+	width: 92%;
 	display: grid;
 	grid-template-rows: 1/3fr 1fr;
-	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
-	
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5), 0 5px 10px 0 rgba(0, 0, 0, 0.4);
+	margin-left: auto;
+	margin-right: auto; 
 }
 
 /* hovering(de-hovering) - https://stackoverflow.com/questions/10995165/what-is-the-opposite-of-hover-on-mouse-leave */
@@ -770,14 +782,15 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 .card-top {
-	background-color: pink;
+	background-color: white;
 
 }
 
 .card-bottom {
 	background-color: white;
-
 }
+
+
 
 .game-library img {
 	width: 90%;
@@ -793,10 +806,13 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 
 .library-image {
 	padding-bottom: 10px;
+	width: 30%;
 }
 
 .card-top h3 {
-	padding-top: 10px;
+	padding-top: 15px;
+	font-size: 22px;
+	text-align: center;
 }
 
 .game-library h3{
@@ -806,6 +822,22 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 
+.math-games>.card-top, .math-games, .math-games>.card-bottom{
+	background-color: rgb(200, 240, 253);
+}
+
+
+.english-games>.card-top, .english-games, .english-games>.card-bottom{
+	background-color: rgb(255, 229, 229);
+}
+
+.computing-games .card-top, .computing-games, .computing-games .card-bottom{
+	background-color: rgb(252, 235, 255);
+}
+
+.geography-games .card-top, .geography-games, .geography-games .card-bottom{
+	background-color: rgb(255, 240, 225);
+}
 
 /* ------------------------------------------------- */ 
 /* ------------- Benefit box animation ------------- */ 
