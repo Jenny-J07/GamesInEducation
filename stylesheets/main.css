@@ -405,7 +405,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	width: 100%;
 }
 
-@media screen and (min-width:600px){
+@media screen and (min-width:800px){
 	.benefit-box .benefit-box-top img {
 		border-radius: 10px 0px 0px 10px;
 	}
@@ -456,7 +456,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	}
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:800px){
 	.benefit-box {
 		display: grid;
 		grid-template-columns: 1fr;
