@@ -172,6 +172,7 @@ footer a{
 	.menutop li:not(:last-child) {display: none;}
   	.menutop .icon {
    		float: right;
+		margin-right: 0.2em;
     	display: block;
 	}
 
