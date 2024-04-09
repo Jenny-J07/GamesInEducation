@@ -283,6 +283,11 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 
+@media screen and (max-width: 750px){
+	.grid-container {
+		padding-bottom: 100px;
+	}
+}
 
 
 @media screen and (min-width: 900px){
@@ -450,18 +455,19 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	}
 }
 
-@media screen and (max-width:800px){
-	.benefit-box{
-		width: 80%;
+@media screen and (max-width:600px){
+	.benefit-box {
+		width: 90%;
 	}
 }
+
 
 @media screen and (max-width:800px){
 	.benefit-box {
 		display: grid;
 		grid-template-columns: 1fr;
 		border-radius: 10px 10px 10px 10px;
-		width: 70%;
+		width: 80%;
 		box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
 		margin-left: auto;
 		margin-right: auto;
@@ -507,7 +513,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 
 .slide-image {
 	display: none;
-	width: 80%;
+	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
 	padding-bottom: 10px;
@@ -1089,3 +1095,22 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 	/* background-color: hsl(195, 53%, 79%); */
 	background-color: hsl(195, 53%, 79%, 0.2);
 }
+
+
+
+
+/* ---------------------------------------------- */ 
+/* ----------- Contact/References Page ---------- */ 
+/* ---------------------------------------------- */ 
+
+
+.contact-references {
+	margin: 25px;
+	font-size: 16px;
+	padding-left: 10px;
+}
+
+.contact-references h2 {
+	font-size: 24px;
+}
+
