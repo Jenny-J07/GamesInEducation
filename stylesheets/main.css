@@ -489,6 +489,9 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 /* ------------- Image slideshow ------------ */ 
 /* ------------------------------------------ */ 
 
+/* W3Schools helped me when creating the image slideshow */
+/* https://www.w3schools.com/howto/howto_js_slideshow.asp */
+
 .slides {
 	position: relative;
 	margin: auto;
@@ -507,6 +510,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 		width: 90%;
 	}
 
+	/* This changes the positioning of the arrows on different screen sizes */
 	.back {
 		left: 22% !important;
 	}
@@ -1016,7 +1020,8 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_
 }
 
 .background-color-1 {
-	background-color: rgba(351, 100, 60, 0.2);
+	/* background-color: rgba(351, 100, 60, 0.2); */
+	background-color: hsla(342, 100%, 84%, 0.2);
 }
 
 

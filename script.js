@@ -72,12 +72,12 @@ function SlideShow(n){
 
 
 // ------- Games Page Sorted Games ---------
+// Different links that helped me when writing the javascript:
 // resizing function - https://www.w3schools.com/jsref/event_onresize.asp
 // screen width - https://www.w3schools.com/jsref/prop_screen_width.asp
 // refresh when screen resized - https://stackoverflow.com/questions/14915653/refresh-page-on-resize-with-javascript-or-jquery
 
 
-// screen.width
 
 function execute(){
 
@@ -93,7 +93,6 @@ function execute(){
         GameCards(geographyGames, geographyGamesPosition);
     }
 
-    // location.reload(); 
  }
 
 
@@ -188,7 +187,6 @@ docuent.addEventListener('DOMContentLoader', () => {
             }
         });
     }, {
-        // observer.observe(document.querySelector('.benefit-box'));
         threshold: 0.1
     });
 
